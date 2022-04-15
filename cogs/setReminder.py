@@ -1,5 +1,7 @@
 from discord.ext import commands
 
+from main import guilds
+
 
 class SetReminder(commands.Cog, name="SetReminder"):
     """Sets a reminder for a determined date."""
@@ -10,7 +12,7 @@ class SetReminder(commands.Cog, name="SetReminder"):
     @commands.slash_command(
         name='setreminder',
         description='de que precisas que eu te relembre?',
-        guild_ids=[826008856714543134, 943609804528713779])
+        guild_ids=guilds)
     async def setReminder(self, ctx):
         await ctx.respond("Esta funcionalidade ainda não foi implementada!")
 

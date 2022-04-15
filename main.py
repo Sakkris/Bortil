@@ -8,6 +8,12 @@ bot = discord.Bot()
 with open('admin/Token.txt') as f:
     token = f.readline()
 
+guilds = []
+
+with open('admin/Guilds.txt') as f:
+    for line in f:
+        guilds.insert(0, int(line.rstrip("\n")))
+
 
 @bot.event
 async def on_ready():
